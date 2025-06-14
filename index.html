@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>starbooth</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500&family=Quicksand:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+    <link href="https://fonts.googleapis.com/css2?family=Patrick+Hand&family=Special+Elite&display=swap" rel="stylesheet">
+  </head>
+  <body>
+    <!-- floating sparkles -->
+    <div class="stars">
+      <span class="star" style="top: 10%; left: 20%;">✧</span>
+      <span class="star" style="top: 30%; left: 70%;">✦</span>
+      <span class="star" style="top: 60%; left: 40%;">✧</span>
+      <span class="star" style="top: 80%; left: 80%;">✺</span>
+    </div>
+
+    <main class="container">
+      <!-- landing page -->
+      <section class="landing">
+        <h1 class="logo">starbooth 𐙚⋆.˚</h1>
+        <p class="subtext">take sweet photos - just like in your favorite seoul photobooth ૮ ˶ᵔ ᵕ ᵔ˶ ა</p>
+        <button id="begin">enter booth</button>
+      </section>
+
+      <!-- filter + frame setup -->
+      <section class="setup hidden" id="setup">
+        <h2>choose your filter</h2>
+        <select id="filter">
+          <option value="none">none</option>
+          <option value="pink-glow">pink glow</option>
+          <option value="milky-way">milky way</option>
+          <option value="soft-blur">soft blur</option>
+          <option value="bw">black & white</option>
+        </select>
+
+        <h2>choose your frame</h2>
+        <select id="frame">
+          <option value="white">white basic</option>
+          <option value="dusty">dusty pink</option>
+          <option value="vintage">vintage cream</option>
+          <option value="modern">modern minimal</option>
+          <option value="pastel">pastel dream</option>
+        </select>
+
+        <button id="start-camera">start camera</button>
+        <button id="back-to-landing" class="back-btn">back</button>
+      </section>
+
+      <!-- photobooth capture -->
+      <section class="photobooth hidden" id="photobooth">
+        <div class="photobooth-layout">
+            <div class="preview-container">
+            <div class="video-wrapper">
+                <div class="photo-counter">photo 0 of 6</div>
+                <video id="camera" autoplay playsinline></video>
+            </div>
+            <button id="start-btn">take photo</button>
+          </div>
+
+        <div id="preview-wrapper">
+            <div class="photo-strip-preview" id="preview"></div>
+            <button id="select-four" class="hidden">choose 4 photos</button>
+          </div>
+        </div>
+
+        <!-- final strip + buttons (shown after selecting 4) -->
+        <div class="final-wrapper hidden" id="final-wrapper">
+            <div id="final-strip"></div>
+            <div class="actions final-actions">
+            <button id="reset" class="hidden">start over</button>
+            <button id="save" class="hidden">save photo strip</button>
+            <button id="back-to-setup" class="back-btn hidden">back to setup</button>
+            </div>
+        </div>
+        </section>
+
+      <!-- footer -->
+      <footer>
+        <p>starbooth by hannah star lee ☆</p>
+      </footer>
+    </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/html2canvas@1.4.1/dist/html2canvas.min.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>
