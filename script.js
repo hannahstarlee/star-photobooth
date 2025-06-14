@@ -403,7 +403,7 @@ saveBtn.addEventListener("click", () => {
             ctx.save();
             ctx.filter = img.style.filter || 'none';
             
-            // Create rounded rectangle for image
+            // create rounded rectangle for image
             const imgX = (stripWidth - imgSize) / 2;
             ctx.beginPath();
             ctx.moveTo(imgX + borderRadius, y);
