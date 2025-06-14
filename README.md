@@ -10,9 +10,11 @@ take quiet, sweet photos with built-in filters + frames
 - download the final strip as a png to keep forever
 
 ## ୨ৎ how to run locally
+```
 git clone https://github.com/hannahstarlee/star-photobooth.git  
 cd star-photobooth  
-open index.html # or use live server in vscode  
+open index.html # or use live server in vscode
+```
 
 ## ୨ৎ tech
 - html5
